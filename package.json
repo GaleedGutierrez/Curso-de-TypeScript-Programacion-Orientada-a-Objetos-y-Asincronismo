@@ -1,0 +1,26 @@
+{
+  "name": "curso-de-typescript-programacion-orientada-a-objetos-y-asincronismo",
+  "version": "1.0.0",
+  "description": "Curso de TypeScript: Programación Orientada a Objetos y Asincronismo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaleedGutierrez/Curso-de-TypeScript-Programacion-Orientada-a-Objetos-y-Asincronismo.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "JavaScript"
+  ],
+  "author": "Galeed Gutierrez <galeedeveloper@gmail.com> (http://galeedgutierrez.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GaleedGutierrez/Curso-de-TypeScript-Programacion-Orientada-a-Objetos-y-Asincronismo/issues"
+  },
+  "homepage": "https://github.com/GaleedGutierrez/Curso-de-TypeScript-Programacion-Orientada-a-Objetos-y-Asincronismo#readme",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
