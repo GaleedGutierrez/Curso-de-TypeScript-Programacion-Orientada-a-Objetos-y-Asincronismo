@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/GaleedGutierrez/Curso-de-TypeScript-Programacion-Orientada-a-Objetos-y-Asincronismo#readme",
   "devDependencies": {
+    "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
   }
 }

@@ -10,7 +10,7 @@ date2.toISOString();
 
 // console.log({date, date2});
 
-class MyDate {
+export class MyDate {
     year: number;
     month: number;
     day: number;
