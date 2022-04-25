@@ -1,13 +1,13 @@
 type PartOfTheCalendar = 'day' | 'month'| 'year';
 
 export class MyDate {
-    year: number;
-    private month: number;
     #day: number;
 
-    constructor (year: number, month: number, day: number) {
-        this.year = year;
-        this.month = month;
+    constructor (
+        public year: number = 1993,
+        public month: number = 7,
+        day: number = 1
+    ) {
         this.#day = day;
     }
 
@@ -28,13 +28,9 @@ export class MyDate {
         if (value < 10) return `0${value}`;
         return `${value}`;
     }
-
-    //  private addPadding (value: number) {
-    //     if (value < 10) return `0${value}`;
-    //     return `${value}`;
-    // }
 }
 
-const myDate = new MyDate(1993, 7, 10);
+const myDate = new MyDate(2020);
+const myDate2 = new MyDate(2021);
 console.log({myDate});
 console.log(myDate.printFormat());
