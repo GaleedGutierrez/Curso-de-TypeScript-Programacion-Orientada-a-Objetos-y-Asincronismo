@@ -32,8 +32,8 @@ export class Dog extends Animal {
         super.move();
     }
 }
-
 // const fifi = new Animal("Fifi");
+
 // fifi.move();
 // console.log(fifi.gretting());
 
