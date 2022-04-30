@@ -6,6 +6,10 @@ import { CreateProductDto, UpdateProductDto } from '../dto/product.dto';
 export class ProductMemoryService {
     #products: Product[] = [];
 
+    constructor () {
+        this.add = this.add.bind(this);
+    }
+
     create (data: CreateProductDto): Product {
         const { add } = this;
         const newProduct = {
@@ -28,8 +32,8 @@ export class ProductMemoryService {
 
     update (idSearch: Product['id'], changes: UpdateProductDto): Product {
         const index = this.#products.findIndex(({id}) => id === idSearch);
-        const prevData = products[index];
-        products[index] = {
+        const prevData = this.#products[index];
+        this.#products[index] = {
             ...prevData,
             ...changes,
         };
@@ -37,8 +41,12 @@ export class ProductMemoryService {
     }
 
     findOne (idSearch: Product['id']) {
-        const found = this.#products.findIndex(({id}) => id === idSearch);
+        const found = this.#products.find(({id}) => id === idSearch);
         return found;
+    }
+
+    getAll () {
+        return this.#products;
     }
 }
 
