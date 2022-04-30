@@ -5,6 +5,14 @@ import { Product } from '../models/product.model';
 
 export class ProductHttpService implements ProductService {
     #URL = 'https://api.escuelajs.co/api/v1/products';
+    static #instance: ProductHttpService | undefined = undefined;
+
+    private constructor () {}
+
+    static createProductHttpService () {
+        if (this.#instance === undefined) this.#instance = new ProductHttpService();
+        return this.#instance;
+    }
 
     async getAll () {
         const { data } = await axios.get<Product[]>(this.#URL);
