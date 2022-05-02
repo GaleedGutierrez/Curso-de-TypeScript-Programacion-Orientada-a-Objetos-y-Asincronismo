@@ -1,3 +1,4 @@
+import { validate } from "class-validator";
 import { UpdateProductDto } from "../dto/product.dto";
 import { Product } from "../models/product.model";
 import { ProductHttpService } from "./product-http2.service";
@@ -10,6 +11,7 @@ export class ProductCRUDService {
         // permisos
         // logica
         this.#http.otherRequests();
+        // validate(dto);
         return this.#http.update(id, dto);
     }
 }
